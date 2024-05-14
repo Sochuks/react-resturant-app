@@ -23,9 +23,11 @@ export default {
         darkColor: '#333',
       },
       // Background Images
-      backgroundImage:{}
+      backgroundImage:{
+        "hero-one": "url(./assets/img/hero-one.jpg)",
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
