@@ -25,6 +25,7 @@ export default {
       // Background Images
       backgroundImage:{
         "hero-one": "url(./assets/img/hero-one.jpg)",
+        "BreakFast": "url(./assets/img/BreakFast.svg)",
       }
     },
   },
