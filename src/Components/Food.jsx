@@ -1,7 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Category } from '../Data/Data'
 
 const Food = () => {
+    const[filterFoods, setfilterFoods] = useState(Category)
+
+    // Filter by food type
+    const filterType = (category) =>{
+        setfilterFoods(
+            Category.filter((item)=>{
+                return item.category === category;
+            }) 
+        )
+    }
+
+    // Filter by food Price
+    const filterPrice = (price) =>{
+        setfilterFoods(
+            Category.filter((item)=>{
+                return item.price === price;
+            }) 
+        )
+    }
   return (
     <section className='max-w-5xl px-4 py-12 mx-auto'>
         <h2 className='text-center font-bold text-3xl text-secColor'>Top Rated Menu Items</h2>
@@ -47,9 +66,7 @@ const Food = () => {
                             <button className="btn btn-primary">Buy Now</button>
                             </div>
                         </div>
-                        </div>
-                        
-                    
+                        </div> 
                         )
 
                    })};
