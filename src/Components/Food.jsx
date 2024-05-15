@@ -1,4 +1,5 @@
 import React from 'react'
+import { Category } from '../Data/Data'
 
 const Food = () => {
   return (
@@ -8,7 +9,7 @@ const Food = () => {
         <div className='flex flex-col justify-between md:flex-row '>
             {/* Filter type */}
             <div>
-                <p className='text-slate-700 font-semibold'>Filter Type</p>
+                <p className='text-silver-700 font-semibold'>Filter Type</p>
                 <div className='buttonList flex justify-between gap-2'>
                     <button>All</button>
                     <button>Burgers</button>
@@ -20,8 +21,8 @@ const Food = () => {
 
             {/* Filter Price*/}
             <div>
-                <p>Filter Type</p>
-                <div>
+                <p className='text-ash-700 font-semibold'>Filter Price</p>
+                <div className='buttonList flex justify-between gap-2'>
                     <button>All</button>
                     <button>Burgers</button>
                     <button>Pizza</button>
@@ -30,8 +31,32 @@ const Food = () => {
                 </div>
             </div>
                 
-            
         </div>
+        {/* food Categories*/}
+        <div className='py-10'>
+            <div  className='grid md:grid-cols-3 grid-cols-2 gap-4'>
+                {/* Map Food */}
+                {Category.map((list) =>{
+                    return(
+                        <div key={list.id} className="card w-80 bg-base-100 rounded-md">
+                            <figure><img src="https://placehold.co/300x300" alt="" /></figure>
+                            <div className="card-body bg-blue-300">
+                            <h2 className="card-title">{list.name}</h2>
+                            <p>{list.description}</p>
+                            <div className="card-actions justify-end">
+                            <button className="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    
+                        )
+
+                   })};
+
+                </div>
+                        
+            </div>
     </section>
   )
 }
