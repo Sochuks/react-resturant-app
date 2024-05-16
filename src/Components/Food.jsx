@@ -17,7 +17,7 @@ const Food = () => {
     const filterPrice = (price) =>{
         setfilterFoods(
             Category.filter((item)=>{
-                return item.price === price;
+                return item.price <= price;
             }) 
         )
     }
@@ -30,11 +30,11 @@ const Food = () => {
             <div>
                 <p className='text-silver-700 font-semibold'>Filter Type</p>
                 <div className='buttonList flex justify-between gap-2'>
-                    <button>All</button>
-                    <button>Burgers</button>
-                    <button>Pizza</button>
-                    <button>Salads</button>
-                    <button>Chicken</button>
+                    <button onClick={()=>setfilterFoods(Category)}>All</button>
+                    <button onClick={()=>filterType("Spicy")}>Spicy</button>
+                    <button onClick={()=>filterType("Chicken")}>Chicken</button>
+                    <button onClick={()=>filterType("Beef")}>Beef</button>
+                    <button onClick={()=>filterType("Fish")}>Fish</button>
                 </div>
             </div>
 
@@ -42,11 +42,11 @@ const Food = () => {
             <div>
                 <p className='text-ash-700 font-semibold'>Filter Price</p>
                 <div className='buttonList flex justify-between gap-2'>
-                    <button>All</button>
-                    <button>Burgers</button>
-                    <button>Pizza</button>
-                    <button>Salads</button>
-                    <button>Chicken</button>
+                    <button onClick={()=>setfilterFoods(Category)}>All</button>
+                    <button onClick={()=>filterPrice(250)}>$250</button>
+                    <button onClick={()=>filterPrice(350)}>$350</button>
+                    <button onClick={()=>filterPrice(450)}>$450</button>
+                    <button onClick={()=>filterPrice(500)}>$500</button>
                 </div>
             </div>
                 
@@ -55,7 +55,7 @@ const Food = () => {
         <div className='py-10'>
             <div  className='grid md:grid-cols-3 grid-cols-2 gap-4'>
                 {/* Map Food */}
-                {Category.map((list) =>{
+                {filterFoods.map((list) =>{
                     return(
                         <div key={list.id} className="card w-80 bg-base-100 rounded-md">
                             <figure><img src="https://placehold.co/300x300" alt="" /></figure>
