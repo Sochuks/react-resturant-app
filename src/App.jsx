@@ -5,6 +5,7 @@ import HeadlineCards from './Components/HeadlineCards'
 import Food from './Components/Food'
 import Category from './Components/Category'
 import Steps from './Components/Steps'
+import About from './Components/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
           <Navbar />
           <Hero />
         </div>
+        <About/>
         <Steps/>
         <HeadlineCards />
         <Food />
