@@ -21,3 +21,9 @@ body{
     @apply bg-green-500 rounded-xl px-3 py-2 text-white hover:bg-green-400
   }
 }
+
+.menuList li:hover{
+  color: #4d9de0;
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+}

@@ -11,8 +11,11 @@ function App() {
   return (
     <>
       <div>
-        <Navbar />
-        <Hero />
+        <div className='bg-hero-one bg-no-repeat bg-cover -mr-4'>
+          <Navbar />
+          <Hero />
+        </div>
+        
         <HeadlineCards />
         <Food />
         <Category/>
