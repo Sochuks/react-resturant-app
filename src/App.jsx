@@ -6,6 +6,7 @@ import Food from './Components/Food'
 import Category from './Components/Category'
 import Steps from './Components/Steps'
 import About from './Components/About'
+import Features from './Components/Features'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
           <Hero />
         </div>
         <About/>
+        <Features/>
         <Steps/>
         <HeadlineCards />
         <Food />
