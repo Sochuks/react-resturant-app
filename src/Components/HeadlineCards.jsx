@@ -16,13 +16,17 @@ const HeadlineCards = () => {
     useEffect(()=> filterData, [Resturant])
 
   return (
-    <section className='py-16 px-2'>
+    <section className='py-16'>
+        {/* Section Heading */}
+        <div className='pt-2 pb-8 md:pt-14 md:pb-4 text-center'>
+        <h2 className='text-center font-semibold text-2xl md:text-4xl text-primaryColor'><span className='text-bgColor'>Hot & Trendy</span><br /> Resturants Around You</h2>
+        </div>
         {/* Container */}
-        <div className='flex flex-col md:flex-row max-w-6xl mx-auto gap-10 overflow-hidden'>
+        <div className='flex flex-col md:flex-row md:my-20 max-w-6xl mx-auto gap-10 overflow-hidden'>
             {/* Card One */}
             { topResturant.map((item)=>( 
                 
-                <article key={item.id} className='flex flex-wrap md:flex-nowrap cursor-pointer transform duration-500 hover:-translate-y-1'>
+                <article key={item.id} className='flex flex-wrap md:flex-nowrap cursor-pointer transform duration-500 shadow-lg hover:-translate-y-1'>
                     <img className="w-full max-h-[400px] object-cover md:w-52" src="https://i.ibb.co/Kr4b0zJ/152013403-10158311889099633-8423107287930246533-o.jpg" alt="" />
                     
                     <div>
@@ -39,7 +43,7 @@ const HeadlineCards = () => {
                         {/* Bottom half */}
                         <div className='p-5 bg-secColor'>
                             {/* container */}
-                            <div className='sm:flex sm:justify-between'>
+                            <div className='sm:flex sm:justify-between sm:items-center'>
                                 {/* Location & rating */}
                                 <div>
                                     <div className="text-lg text-gray-700">
@@ -58,12 +62,12 @@ const HeadlineCards = () => {
                                     </div>
                                 </div>
                                 {/* Button */}
-                                <button className="mt-3 sm:mt-0 py-2 px-5 md:py-3 md:px-6 bg-purple-700 hover:bg-purple-600 font-bold text-white md:text-lg rounded-lg shadow-md">
+                                <button className="mt-3 sm:mt-0 py-2 px-4 md:py-3 md:px-5 bg-successColor hover:bg-successColor/75 font-medium text-white md:text-lg rounded-lg shadow-md">
                                     Menu
                                 </button>
                             </div>
                                 {/* BOTTOM TEXT */}
-                                <div className="mt-3 text-gray-600 text-sm md:text-sm">
+                                <div className="mt-4 text-white text-sm md:text-sm">
                                     *Places to visit: Mahasthangarh, Vasu Bihar &amp; Momo Inn
                                 </div>
                         </div>

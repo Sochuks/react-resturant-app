@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { IoCart } from "react-icons/io5";
+import { GiShoppingBag } from "react-icons/gi";
 
 
 const Navbar = () => {
@@ -66,7 +66,7 @@ const Navbar = () => {
                 </div>
                 {/* Cart */}
                 <button className='hidden py-2 px-2 rounded-md bg-successColor text-white transition-colors ease-linear duration-300 hover:bg-successColor/60 hover:text-white md:block'>
-                <IoCart size={30}/>
+                <GiShoppingBag size={30}/>
                 </button>
                 {/* Menu Icon */}
                 <button className="btn btn-square btn-ghost bg-successColor text-white hover:bg-successColor/60 hover:text-white rounded-md"
