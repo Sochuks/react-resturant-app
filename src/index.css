@@ -27,3 +27,7 @@ body{
   transition: ease-in-out;
   transition-duration: 0.5s;
 }
+
+.slick-slide > div{
+  margin: 0 30px;
+}
